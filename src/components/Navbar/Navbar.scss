@@ -1,0 +1,55 @@
+$background: #000000;
+$grey: #202020;
+$white: #cdcdcd;
+
+.Navbar {
+	color: $white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 10px;
+	margin-bottom: 40px;
+
+	.Navbar__container {
+		height: 100%;
+		width: 85%;
+		display: flex;
+		justify-content: space-between;
+
+		.Navbar__container--image {
+			width: 25%;
+		}
+		.Navbar__container--content {
+			width: 45%;
+
+			div {
+				width: 33.33%;
+				a {
+					text-decoration: none;
+					color: $white;
+
+					&:hover {
+						transition: 2s ease-in-out;
+						border-bottom: 2px solid $white;
+					}
+				}
+			}
+		}
+	}
+}
+
+.centerVH-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+
+@keyframes slideIn {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 100%;
+	}
+}

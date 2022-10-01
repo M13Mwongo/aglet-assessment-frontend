@@ -1,0 +1,21 @@
+//breakpoint at 960px between views
+.home {
+	display: flex;
+}
+
+@media screen and (max-width: 960px) {
+	.home {
+		width: 100%;
+		flex-direction: column;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	.home {
+		padding: 50px;
+		display: flex;
+		flex-direction: row;
+		overflow: hidden;
+		height: auto;
+	}
+}
