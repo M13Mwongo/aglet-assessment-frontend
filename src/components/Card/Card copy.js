@@ -19,8 +19,12 @@ const Card = ({ image, video }) => {
 	}
 
 	return (
-		<div onMouseOver={hover} onMouseLeave={notHover} className='card'>
-			<div className='card__video'>
+		<div
+			onMouseOver={hover}
+			onMouseLeave={notHover}
+			className={`${hovered ? `card__hovered` : `card__notHovered`}`}
+		>
+			<div className={`${hovered ? `card__video--hovered` : `card__video`}`}>
 				<video
 					poster={image}
 					onMouseOver={play}

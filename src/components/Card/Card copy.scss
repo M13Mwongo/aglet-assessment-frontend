@@ -19,4 +19,18 @@
 }
 
 @media screen and (min-width: 960px) {
+	// .card__notHovered {
+	// 	opacity: 0.75;
+	// }
+	.card__hovered {
+		opacity: 1;
+		&:hover {
+			.card__video {
+				opacity: 0.1;
+			}
+		}
+	}
+	.card__hovered:hover .card__video {
+		opacity: 0.2;
+	}
 }

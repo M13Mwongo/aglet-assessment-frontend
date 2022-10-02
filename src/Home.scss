@@ -7,7 +7,6 @@ $white: #f2f2f2;
 .home {
 	display: flex;
 }
-
 @media screen and (max-width: 960px) {
 	.home {
 		width: 100%;
@@ -33,16 +32,19 @@ $white: #f2f2f2;
 		margin: 0px 50px;
 		padding-top: 20px;
 		padding-bottom: 150px;
-		display: flex;
 		flex-direction: row;
-		height: auto;
 		overflow-x: scroll;
 
-		.home__video--dark {
-			opacity: 0.5;
+		&:hover {
+			.home__video {
+				opacity: 0.5;
+			}
 		}
-		.home__video--light {
-			opacity: 1;
+
+		.home__video {
+			&:hover {
+				opacity: 1;
+			}
 		}
 	}
 }
