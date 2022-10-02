@@ -5,14 +5,25 @@ import { sliderData } from './assets'
 import './Home.scss'
 
 const Home = () => {
+	const [hover, setHover] = useState(false)
+	const [lighter, setLighter] = useState(false)
+
+	const findPosition = (position) => {}
+
 	return (
 		<div className='home'>
-			<Card image={sliderData[0].image} video={sliderData[0].video} />
-			{/* 			
 			{sliderData.map((card, index) => (
-				<Card image={card.image} video={card.video} />
-			))} 
-			*/}
+				<div
+					className={`home__video ${hover ? `home__video--dark` : null}`}
+					onMouseOver={() => {
+						setHover(true)
+						setLighter(true)
+					}}
+					onMouseLeave={() => setHover(false)}
+				>
+					<Card image={card.image} video={card.video} lighten={lighter} />
+				</div>
+			))}
 		</div>
 	)
 }
