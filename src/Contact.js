@@ -1,4 +1,4 @@
-import { Github, Slack, contactImage, Linkedin } from './assets'
+import { contactImage } from './assets'
 import './Contact.scss'
 
 const Contact = () => {

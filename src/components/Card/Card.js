@@ -1,15 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Card.scss'
 
 const Card = ({ image, video }) => {
-	const [hovered, setHovered] = useState(false)
-
-	const hover = () => {
-		setHovered(true)
-	}
-	const notHover = () => {
-		setHovered(false)
-	}
 	const play = (e) => {
 		e.target.play()
 	}
@@ -19,7 +11,7 @@ const Card = ({ image, video }) => {
 	}
 
 	return (
-		<div onMouseOver={hover} onMouseLeave={notHover} className='card'>
+		<div className='card'>
 			<div className='card__video'>
 				<video
 					poster={image}

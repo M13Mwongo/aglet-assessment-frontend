@@ -4,9 +4,7 @@ $greyLight: #86878b;
 $white: #f2f2f2;
 
 //breakpoint at 960px between views
-.home {
-	display: flex;
-}
+
 @media screen and (max-width: 960px) {
 	.home {
 		width: 100%;
@@ -16,7 +14,7 @@ $white: #f2f2f2;
 
 @media screen and (min-width: 960px) {
 	::-webkit-scrollbar {
-		height: 5px;
+		height: 7px;
 	}
 	::-webkit-scrollbar-track {
 		background: $greyDark;
@@ -29,21 +27,29 @@ $white: #f2f2f2;
 		cursor: grab;
 	}
 	.home {
-		margin: 0px 50px;
-		padding-top: 20px;
-		padding-bottom: 150px;
-		flex-direction: row;
+		color: $white;
+		margin: 50px;
+		padding-bottom: 10%;
 		overflow-x: scroll;
+		scroll-behavior: smooth;
 
-		&:hover {
-			.home__video {
-				opacity: 0.5;
-			}
-		}
+		.home__wrapper {
+			display: flex;
+			flex-direction: row;
+			cursor: grab;
 
-		.home__video {
 			&:hover {
-				opacity: 1;
+				.home__video {
+					opacity: 0.35;
+					transition: 0.12s ease-in-out;
+				}
+			}
+			.home__video {
+				margin-bottom: 10px;
+				&:hover {
+					opacity: 1;
+					transition: 0.12s ease-in-out;
+				}
 			}
 		}
 	}
