@@ -1,26 +1,24 @@
 $background: #000000;
 $grey: #202020;
+$greyLight: #3b3b3b;
 $white: #cdcdcd;
 
 .Navbar {
 	color: $white;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	padding: 20px 10px;
 	margin-bottom: 40px;
 
-	.Navbar__container {
+	.Navbar__desktop {
 		height: 100%;
-		width: 85%;
+		padding: 5px 100px;
 		display: flex;
 		justify-content: space-between;
 
-		.Navbar__container--image {
+		.Navbar__desktop--image {
 			width: 25%;
 		}
-		.Navbar__container--content {
-			width: 45%;
+		.Navbar__desktop--content {
+			width: 35%;
 			display: flex;
 			justify-content: space-around;
 			align-items: center;
@@ -47,6 +45,48 @@ $white: #cdcdcd;
 			}
 		}
 	}
+
+	.Navbar__mobile {
+		display: flex;
+		justify-content: space-between;
+		padding: 0px 20px;
+
+		.Navbar__mobile--icon {
+			display: flex;
+		}
+		.Navbar__mobile--content {
+			position: absolute;
+			top: 70px;
+			right: 5px;
+			background-color: $grey;
+			z-index: 20;
+			border-radius: 4px;
+			display: flex;
+			flex-direction: column;
+			animation-name: visible;
+			animation-duration: 0.5s;
+			animation-fill-mode: both;
+
+			a {
+				border-bottom: 1px solid $white;
+				text-align: left;
+				width: 100%;
+				padding: 20px;
+				text-decoration: none;
+				color: $white;
+				&:focus,
+				&:hover {
+					background-color: $greyLight;
+				}
+			}
+		}
+		.visible {
+			display: flex;
+		}
+		.invisible {
+			display: none;
+		}
+	}
 }
 
 @keyframes slideIn {
@@ -56,4 +96,20 @@ $white: #cdcdcd;
 	to {
 		width: 100%;
 	}
+}
+
+@keyframes visible {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.center__vh--row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
 }

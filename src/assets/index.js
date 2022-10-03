@@ -24,10 +24,7 @@ import vid11 from './Videos/vid11.mp4'
 import vid12 from './Videos/vid12.mp4'
 
 import contactImage from './contact-image.jpg'
-
-import Slack from './icons/slack.svg'
-import Linkedin from './icons/linkedin.svg'
-import Github from './icons/github.svg'
+import logo from './aglet_logo.svg'
 
 const sliderData = [
 	{ index: 1, image: img1, video: vid1 },
@@ -44,4 +41,4 @@ const sliderData = [
 	{ index: 12, image: img12, video: vid12 }
 ]
 
-export { sliderData, contactImage, Slack, Linkedin, Github }
+export { sliderData, contactImage, logo }

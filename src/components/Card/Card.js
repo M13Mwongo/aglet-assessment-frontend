@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import './Card.scss'
 
 const Card = ({ image, video }) => {
 	const [width, setWidth] = useState()
