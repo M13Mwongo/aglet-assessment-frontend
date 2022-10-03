@@ -6,36 +6,42 @@ import './Home.scss'
 
 const Home = () => {
 	const [mousePosition, setMousePosition] = useState(null)
-
-	// const findMousePosition = () => {
-	// 	setMousePosition(window.event.clientX)
-	// }
+	const [midpt, setMidpt] = useState(window.innerWidth / 2)
+	const [offsetX, setOffsetX] = useState(0)
 
 	const scrollX = () => {
 		let wrapper = document.getElementById('home')
-		let middle = window.innerHeight / 2
 
-		var scrollDifference = mousePosition - middle
-		wrapper.scrollBy(scrollDifference, 0)
+		let lowerBoundary = window.innerWidth / 4
+		let upperBoundary = 3 * lowerBoundary
+
+		if (mousePosition > upperBoundary || mousePosition < lowerBoundary) {
+			wrapper.scrollBy(offsetX, 0)
+		}
 	}
 
 	useEffect(() => {
 		const update = (e) => {
-			setMousePosition(e.x)
+			setMousePosition(e.clientX)
+			let offset = mousePosition - midpt
+			setOffsetX(offset)
+		}
+		const resize = () => {
+			setMidpt(window.innerWidth / 2)
 		}
 		window.addEventListener('mousemove', update)
+		window.addEventListener('mousedown', update)
+		window.addEventListener('resize', resize)
 		return () => {
 			window.removeEventListener('mousemove', update)
+			window.removeEventListener('mousedown', update)
+			window.removeEventListener('resize', resize)
 		}
-	}, [mousePosition])
-
-	// useEffect(() => {
-	// 	setMousePosition(e)
-	// }, [mousePosition])
+	}, [mousePosition, offsetX, midpt])
 
 	return (
 		<div className='home' id='home'>
-			<div className='home__wrapper' draggable onDrag={scrollX}>
+			<div className='home__wrapper' onMouseOver={scrollX}>
 				{sliderData.map((card, index) => (
 					<div className='home__video' key={index}>
 						<Card image={card.image} video={card.video} />

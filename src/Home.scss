@@ -40,6 +40,7 @@ $white: #f2f2f2;
 		padding-bottom: 10%;
 		overflow-x: scroll;
 		scroll-behavior: smooth;
+		scroll-snap-type: x mandatory;
 
 		.home__wrapper {
 			display: flex;

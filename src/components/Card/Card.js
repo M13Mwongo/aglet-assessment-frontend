@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import './Card.scss'
 
 const Card = ({ image, video }) => {
 	const [width, setWidth] = useState()
@@ -29,6 +30,7 @@ const Card = ({ image, video }) => {
 				onMouseLeave={stop}
 				width={width < 960 ? '100%' : '640px'}
 				height={width < 960 ? '100%' : '360px'}
+				disabled
 			>
 				<source src={video} type='video/mp4' />
 			</video>
