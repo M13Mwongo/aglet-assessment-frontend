@@ -21,28 +21,32 @@ $white: #cdcdcd;
 		}
 		.Navbar__container--content {
 			width: 45%;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			flex-direction: row;
 
 			div {
-				width: 33.33%;
+				display: flex;
+				flex-direction: column;
 				a {
 					text-decoration: none;
 					color: $white;
-
-					&:hover {
-						transition: 2s ease-in-out;
-						border-bottom: 2px solid $white;
+				}
+				span {
+					height: 3px;
+				}
+				&:hover {
+					span {
+						background-color: $white;
+						animation-name: slideIn;
+						animation-duration: 0.15s;
+						animation-fill-mode: both;
 					}
 				}
 			}
 		}
 	}
-}
-
-.centerVH-row {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
 }
 
 @keyframes slideIn {

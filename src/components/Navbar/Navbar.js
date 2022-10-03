@@ -10,12 +10,14 @@ const Navbar = () => {
 					<img src={logo} alt='Aglet Logo' width={100} />
 				</div>
 
-				<div className='Navbar__container--content centerVH-row'>
+				<div className='Navbar__container--content '>
 					<div>
 						<a href='/'>Home</a>
+						<span></span>
 					</div>
 					<div>
 						<a href='/contact'>Contact Me</a>
+						<span></span>
 					</div>
 				</div>
 			</div>

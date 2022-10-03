@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './Card.scss'
 
 const Card = ({ image, video }) => {
+	const [width, setWidth] = useState()
+
 	const play = (e) => {
 		e.target.play()
 	}
@@ -10,19 +12,27 @@ const Card = ({ image, video }) => {
 		e.target.currentTime = 0
 	}
 
+	useEffect(() => {
+		const update = () => {
+			setWidth(window.innerWidth)
+		}
+		window.addEventListener('resize', update)
+		return () => {
+			window.removeEventListener('resize', update)
+		}
+	}, [width])
+
 	return (
 		<div className='card'>
-			<div className='card__video'>
-				<video
-					poster={image}
-					onMouseOver={play}
-					onMouseLeave={stop}
-					width={window.innerWidth < 640 ? '100%' : '640px'}
-					height='auto'
-				>
-					<source src={video} type='video/mp4' />
-				</video>
-			</div>
+			<video
+				poster={image}
+				onMouseOver={play}
+				onMouseLeave={stop}
+				width={width < 960 ? '100%' : '640px'}
+				height={width < 960 ? '100%' : '360px'}
+			>
+				<source src={video} type='video/mp4' />
+			</video>
 		</div>
 	)
 }

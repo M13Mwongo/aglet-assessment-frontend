@@ -1,22 +1,11 @@
 @media screen and (max-width: 960px) {
 	.card {
-		&:hover {
-			video {
-				opacity: 0.5;
-				transition: 0.12s ease-in-out;
-			}
-		}
-		width: 100%;
-		.card__video {
-			&:hover {
-				video {
-					opacity: 1;
-					transition: 0.12s ease-in-out;
-				}
-			}
+		height: calc(100% - 44px);
+		margin: 0;
+		padding: 0;
+		video {
+			margin: 0;
+			padding: 0;
 		}
 	}
-}
-
-@media screen and (min-width: 960px) {
 }
