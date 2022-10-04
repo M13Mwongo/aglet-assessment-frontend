@@ -4,9 +4,14 @@ import { logo } from '../../assets'
 import './Navbar.scss'
 
 const Navbar = () => {
+	/*
+	width->Keeps track of page width
+	clicked->checks whether the navbar icon has been clicked or not
+	 */
 	const [width, setWidth] = useState(window.innerWidth)
 	const [clicked, setClicked] = useState(false)
 
+	//updates page width
 	useEffect(() => {
 		const update = () => {
 			setWidth(window.innerWidth)
@@ -17,6 +22,10 @@ const Navbar = () => {
 		}
 	}, [width])
 
+	/*
+	Depending on the size of the viewport, the desktop navbar or mobile navbar will be shown
+	
+	 */
 	return (
 		<div className='Navbar'>
 			{width > 960 ? (
@@ -57,10 +66,10 @@ const Navbar = () => {
 								viewBox='0 0 24 24'
 								fill='none'
 								stroke='currentColor'
-								stroke-width='2'
-								stroke-linecap='round'
-								stroke-linejoin='round'
-								class='icon icon-x'
+								strokeWidth='2'
+								strokeLinecap='round'
+								strokeLinejoin='round'
+								className='icon icon-x'
 							>
 								<line x1='18' y1='6' x2='6' y2='18'></line>
 								<line x1='6' y1='6' x2='18' y2='18'></line>
@@ -73,10 +82,10 @@ const Navbar = () => {
 								viewBox='0 0 24 24'
 								fill='none'
 								stroke='currentColor'
-								stroke-width='2'
-								stroke-linecap='round'
-								stroke-linejoin='round'
-								class='icon icon-menu'
+								strokeWidth='2'
+								strokeLinecap='round'
+								strokeLinejoin='round'
+								className='icon icon-menu'
 							>
 								<line x1='3' y1='12' x2='21' y2='12'></line>
 								<line x1='3' y1='6' x2='21' y2='6'></line>

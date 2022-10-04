@@ -6,8 +6,8 @@ $white: #cdcdcd;
 .Navbar {
 	color: $white;
 	padding: 20px 10px;
-	margin-bottom: 40px;
 
+	//formatting for large screens/ desktops
 	.Navbar__desktop {
 		height: 100%;
 		padding: 5px 100px;
@@ -46,6 +46,7 @@ $white: #cdcdcd;
 		}
 	}
 
+	//formatting for sm all screens/ mobile
 	.Navbar__mobile {
 		display: flex;
 		justify-content: space-between;
@@ -89,6 +90,7 @@ $white: #cdcdcd;
 	}
 }
 
+//animation that causes the span to slide in from left to right
 @keyframes slideIn {
 	from {
 		width: 0%;
@@ -98,6 +100,7 @@ $white: #cdcdcd;
 	}
 }
 
+//fade in the drop down menu
 @keyframes visible {
 	from {
 		opacity: 0;
@@ -107,6 +110,7 @@ $white: #cdcdcd;
 	}
 }
 
+//content is arranged as a row & centered verticall + horizontally
 .center__vh--row {
 	display: flex;
 	justify-content: center;

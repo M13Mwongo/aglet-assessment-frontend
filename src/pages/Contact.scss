@@ -1,6 +1,7 @@
 $background: #000000;
 $grey-dark: #202020;
 $greyy-light: #cdcdcd;
+$lime: #00927c;
 $white: #f2f2f2;
 
 .contact {
@@ -44,6 +45,10 @@ $white: #f2f2f2;
 			div {
 				line-height: 0.6;
 				margin-top: 50px;
+
+				a {
+					color: $lime;
+				}
 			}
 			.socials {
 				display: flex;
@@ -64,6 +69,7 @@ $white: #f2f2f2;
 	}
 }
 
+//different viewport sizes were used to ensure the contact page is clearly visible across a range of devides
 @media screen and (max-width: 480px) {
 	.contact {
 		flex-direction: column;
@@ -116,6 +122,7 @@ $white: #f2f2f2;
 				right: 0;
 				bottom: 0;
 				text-align: left;
+
 				.socials {
 					display: flex;
 					flex-direction: row;

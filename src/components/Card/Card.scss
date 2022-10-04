@@ -1,4 +1,5 @@
 .card {
+	//prevents user from grabbing/ selecting video
 	video {
 		-webkit-user-drag: none;
 		-moz-user-select: none;

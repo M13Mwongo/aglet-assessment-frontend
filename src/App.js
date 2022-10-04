@@ -1,10 +1,19 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Home from './Home'
-import Contact from './Contact'
+import Home from './pages/Home'
+import Contact from './pages/Contact'
+import PageNotFound from './PageNotFound'
 import Navbar from './components/Navbar/Navbar'
 
 import './App.scss'
 
+/*
+Defines the animation to use for the transition between pages. This will show a simple slide in
+*/
+
+/*
+	To navigate between pages/ interfaces, the entire app needs to be wrapped by the Router. Each of the routes is defined and resnders an intended target.
+	A 404 error page has been added as well in the event that a user types in an incorrect URL
+*/
 function App() {
 	return (
 		<Router>
@@ -13,7 +22,7 @@ function App() {
 				<Routes>
 					<Route path='/' element={<Home />} />
 					<Route path='/contact' element={<Contact />} />
-					{/* <Route path='*' element={<PageNotFound />} /> */}
+					<Route path='*' element={<PageNotFound />} />
 				</Routes>
 			</div>
 		</Router>
