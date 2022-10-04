@@ -1,6 +1,6 @@
 import AnimationLayout from '../animationLayout'
 import { contactImage } from '../assets'
-import './Contact.scss'
+import '../styles/Contact.scss'
 
 const Contact = () => {
 	/*

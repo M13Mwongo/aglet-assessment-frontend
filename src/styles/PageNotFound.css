@@ -1,0 +1,26 @@
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: calc(100vh - 76px);
+  text-align: center;
+  background: linear-gradient(#000000, #222222); }
+  .error .error__wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 75%; }
+    .error .error__wrapper div {
+      width: 50%;
+      margin-top: auto;
+      margin-bottom: auto; }
+      .error .error__wrapper div svg {
+        font-size: 70px;
+        width: 160px;
+        height: 160px; }
+      .error .error__wrapper div a {
+        color: aqua; }
+  .error h1 {
+    font-size: 5rem; }
+
+/*# sourceMappingURL=PageNotFound.css.map */

@@ -1,5 +1,5 @@
 import React from 'react'
-import './Card.scss'
+import '../styles/Card.scss'
 
 /*
 The Card components takes 3 props: image,video and width.

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { logo } from '../../assets'
-import './Navbar.scss'
+import { logo } from '../assets'
+import '../styles/Navbar.scss'
 
 const Navbar = () => {
 	/*

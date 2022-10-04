@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import Card from '../components/Card/Card'
+import Card from '../components/Card'
 import { sliderData } from '../assets'
 //SCSS file for the homepage
-import './Home.scss'
+import '../styles/Home.scss'
 import AnimationLayout from '../animationLayout'
 
 const Home = () => {

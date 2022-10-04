@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import AnimationLayout from './animationLayout'
-import './PageNotFound.scss'
+import './styles/PageNotFound.scss'
 
 const PageNotFound = () => {
 	return (

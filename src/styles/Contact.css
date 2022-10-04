@@ -1,0 +1,120 @@
+.contact {
+  color: #f2f2f2;
+  padding: 10px;
+  width: 65%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto; }
+  .contact .contact__image {
+    display: block;
+    height: 100%; }
+    .contact .contact__image img {
+      height: calc(100vh - 130px); }
+  .contact .contact__content {
+    position: relative;
+    width: 100%; }
+    .contact .contact__content .contact__content--header {
+      position: absolute;
+      top: 30px;
+      left: -250px;
+      color: #202020;
+      z-index: 20; }
+      .contact .contact__content .contact__content--header span {
+        font-size: 15em; }
+    .contact .contact__content .contact__content--details {
+      font-size: 1em;
+      padding: 5px 40px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0; }
+      .contact .contact__content .contact__content--details div {
+        line-height: 0.6;
+        margin-top: 50px; }
+        .contact .contact__content .contact__content--details div a {
+          color: #00927c; }
+      .contact .contact__content .contact__content--details .socials {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 55%; }
+        .contact .contact__content .contact__content--details .socials .icon {
+          cursor: pointer; }
+          .contact .contact__content .contact__content--details .socials .icon:hover {
+            transform: scale(1.3);
+            transition: 0.15s ease-in-out; }
+
+@media screen and (max-width: 480px) {
+  .contact {
+    flex-direction: column;
+    width: 100%; }
+    .contact .contact__image {
+      margin-left: auto;
+      margin-right: auto; }
+    .contact .contact__content {
+      height: 330px; }
+      .contact .contact__content .contact__content--header {
+        position: absolute;
+        top: -130px;
+        left: 20px; }
+        .contact .contact__content .contact__content--header span {
+          font-size: 10em; }
+      .contact .contact__content .contact__content--details {
+        font-size: 0.8em; } }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+    width: 100%; }
+    .contact .contact__image {
+      margin-left: auto;
+      margin-right: auto; }
+    .contact .contact__content {
+      height: 330px; }
+      .contact .contact__content .contact__content--header {
+        top: -130px;
+        left: 20px; }
+        .contact .contact__content .contact__content--header span {
+          font-size: 11em; }
+      .contact .contact__content .contact__content--details {
+        padding: 0px 140px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: left; }
+        .contact .contact__content .contact__content--details .socials {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          width: 55%; }
+          .contact .contact__content .contact__content--details .socials .icon {
+            cursor: pointer; }
+            .contact .contact__content .contact__content--details .socials .icon:hover {
+              transform: scale(1.3);
+              transition: 0.15s ease-in-out; } }
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .contact {
+    width: 90%; }
+    .contact .contact__content .contact__content--header span {
+      font-size: 12em; }
+    .contact .contact__content .contact__content--details {
+      padding-left: 10px;
+      font-size: 0.9em; }
+      .contact .contact__content .contact__content--details div {
+        line-height: 0.6;
+        margin-top: 50px; }
+      .contact .contact__content .contact__content--details .socials {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 55%; }
+        .contact .contact__content .contact__content--details .socials .icon {
+          cursor: pointer; }
+          .contact .contact__content .contact__content--details .socials .icon:hover {
+            transform: scale(1.3);
+            transition: 0.15s ease-in-out; } }
+
+/*# sourceMappingURL=Contact.css.map */

@@ -1,15 +1,7 @@
-# Getting Started with Create React App
+# Aglet Frontend Developer Assessment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created to attempt to replicate the slider seen in this site: https://antoni.de/cases/
 
-## Available Scripts
+It was created with code that I wrote, and content supplied by the company.
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+I in no way claim ownership of any of the photos/ videos seen on this site.
